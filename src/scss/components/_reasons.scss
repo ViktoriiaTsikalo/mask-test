@@ -1,0 +1,64 @@
+@use "utils/mixins" as mix;
+@use "utils/variables" as vars;
+
+.reasons {
+  display: flex;
+  margin-bottom: 80px;
+  .mask {
+    border-radius: 16px 16px 16px 0;
+    width: 400px;
+    height: 630px;
+    margin-right: 87px;
+  }
+  div {
+    padding-top: 4px;
+    h2 {
+      font-family: vars.$second-family;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 104%;
+      color: vars.$dark-1-122d;
+      margin-bottom: 25px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 188%;
+      margin-bottom: 35px;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      column-gap: 26px;
+      li {
+        max-width: 312px;
+        display: flex;
+        align-items: flex-start;
+        .icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 100%;
+          background-color: vars.$blue;
+          @include mix.flex-center;
+          flex-shrink: 0;
+          margin-right: 17px;
+        }
+        div {
+          h3 {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 140%;
+            color: vars.$dark-1-122d;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 147%;
+          }
+        }
+      }
+    }
+  }
+}

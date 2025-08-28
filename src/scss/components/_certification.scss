@@ -1,0 +1,25 @@
+@use "utils/mixins" as mix;
+@use "utils/variables" as vars;
+
+.certification {
+  display: flex;
+  align-items: center;
+  padding-right: 246px;
+  margin-bottom: 80px;
+  h3 {
+    font-size: 15px;
+    line-height: 160%;
+    margin-right: 16px;
+  }
+  div {
+    width: 147px;
+    height: 1px;
+    background-color: vars.$accent;
+    margin-right: 87px;
+  }
+
+  ul {
+    @include mix.flex-center;
+    gap: 100px;
+  }
+}

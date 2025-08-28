@@ -1,0 +1,75 @@
+@use "utils/mixins" as mix;
+@use "utils/variables" as vars;
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 72px;
+
+  > div {
+    max-width: 555px;
+    width: 100%;
+    .number {
+      font-family: vars.$second-family;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 214%;
+      color: vars.$accent;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-family: vars.$second-family;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 114%;
+      color: vars.$dark-1-122d;
+      margin-bottom: 25px;
+    }
+
+    .text {
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 54px;
+    }
+
+    div {
+      display: flex;
+      gap: 20px;
+
+      .show {
+        border-radius: 8px;
+        width: 115px;
+        height: 46px;
+        box-shadow: 0 10px 15px 0 rgba(27, 95, 193, 0.19);
+        background-color: vars.$blue;
+        font-family: vars.$second-family;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 214%;
+        text-align: center;
+        color: #fff;
+      }
+
+      .learn {
+        border: 1px solid vars.$accent;
+        border-radius: 8px;
+        width: 125px;
+        height: 46px;
+        font-family: vars.$second-family;
+        color: vars.$accent;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 214%;
+        text-align: center;
+      }
+    }
+  }
+
+  img {
+    border-radius: 16px 16px 16px 0;
+    width: 496px;
+    height: 744px;
+  }
+}

@@ -1,0 +1,41 @@
+@use "utils/mixins" as mix;
+@use "utils/variables" as vars;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-bottom: 80px;
+  .part {
+    display: flex;
+    gap: 44px;
+    img {
+      border-radius: 16px 16px 16px 0;
+      width: 570px;
+      height: 616px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+
+      h2 {
+        font-family: vars.$second-family;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 104%;
+        color: vars.$dark-1-122d;
+        margin-bottom: 26px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 188%;
+      }
+
+      p:first-of-type {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use "../utils/mixins" as mix;
+@use "utils/variables" as vars;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin-bottom: 60px;
+  a {
+    div {
+      width: 161px;
+      height: 40px;
+      background: #c4c4c4;
+    }
+  }
+  nav {
+    ul {
+      @include mix.flex-center;
+      gap: 45px;
+
+      li {
+        font-size: 16px;
+        line-height: 188%;
+
+        &:first-child {
+          color: vars.$dark-1-122d;
+        }
+
+        button {
+          border-radius: 8px;
+          width: 123px;
+          height: 47px;
+          background-color: vars.$blue;
+          font-family: vars.$second-family;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 214%;
+          text-align: center;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

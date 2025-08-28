@@ -1,0 +1,34 @@
+@use "utils/mixins" as mix;
+@use "utils/variables" as vars;
+
+.advantages {
+  margin-bottom: 133px;
+  ul {
+    display: flex;
+    align-items: start;
+    gap: 31px;
+    li {
+      display: flex;
+      align-items: start;
+      gap: 20px;
+
+      .icon {
+        flex-shrink: 0;
+        padding-top: 6px;
+      }
+
+      h3 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+        color: vars.$dark-1-122d;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 147%;
+      }
+    }
+  }
+}

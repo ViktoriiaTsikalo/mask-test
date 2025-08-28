@@ -1,0 +1,70 @@
+/* reset.scss */
+
+/* Обнулення відступів і рамок */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Скидання шрифтів */
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Видалення стилів списків */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Видалення підкреслення у посилань */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Скидання стилів заголовків */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Картинки адаптивні */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Форматування форм */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* Курсор для кнопок */
+button {
+  cursor: pointer;
+}

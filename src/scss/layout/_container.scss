@@ -1,0 +1,17 @@
+@use "utils/variables" as vars;
+@use "utils/mixins" as mix;
+
+.container {
+  max-width: 393px;
+  margin: 0 auto; // базова ширина для мобільних
+
+  // Планшети
+  @include mix.tablet {
+    max-width: 768px;
+  }
+
+  // Десктопи
+  @include mix.desktop {
+    max-width: 1140px;
+  }
+}

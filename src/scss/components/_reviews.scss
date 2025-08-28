@@ -1,0 +1,70 @@
+@use "utils/mixins" as mix;
+@use "utils/variables" as vars;
+
+.reviews {
+  ul {
+    display: flex;
+    gap: 25px;
+    li {
+      background-color: #fff;
+      border: 1px solid #b8b6b662;
+      border-radius: 16px 16px 16px 0;
+      padding: 50px 35px;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .stars {
+          display: flex;
+          align-items: center;
+          gap: 1px;
+          .star {
+            fill: vars.$accent;
+            display: block;
+          }
+        }
+        .icon {
+          fill: #a9a9bb62;
+          display: block;
+        }
+      }
+      p {
+        line-height: 170%;
+        color: vars.$dark-1-122d;
+        margin-top: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .author {
+        justify-content: start;
+        gap: 15px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          align-items: start;
+
+          .name {
+            margin-top: 0px;
+            letter-spacing: 2px;
+            margin-bottom: 0px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 120%;
+          }
+
+          .profession {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            line-height: 120%;
+            font-size: 14px;
+            color: vars.$grey;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

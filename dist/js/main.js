@@ -1,0 +1,1 @@
+const burger=document.querySelector(".burger"),nav=document.querySelector("#nav");burger&&nav&&burger.addEventListener("click",()=>{const e="true"===burger.getAttribute("aria-expanded");burger.setAttribute("aria-expanded",String(!e)),nav.hidden=e});

@@ -1,0 +1,72 @@
+@use "utils/variables" as vars;
+@use "utils/mixins" as mix;
+
+body {
+  font-family: vars.$font-family;
+  color: vars.$grey;
+  font-weight: 400;
+  background-color: #fff;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  // Фото на фоні
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 927px;
+    width: 100%;
+    height: 891px;
+    background-image: url("../images/backround-img-1x.webp");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 1;
+    border-radius: 0 0 0 150px;
+
+    @include mix.retina {
+      background-image: url("../images/backround-img-2x.webp");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    background-color: #f5fcfa;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .shape-2 {
+    position: absolute;
+    width: 100%;
+    height: 2491px;
+    top: 969px;
+    left: 0;
+    background-image: url("../images/backround.webp");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .shape-3 {
+    position: absolute;
+    width: 100%;
+    height: 1614px;
+    border-radius: 0 0 0 150px;
+    background-color: #f7fdfb;
+    left: 0;
+    top: 2969px;
+    z-index: 1;
+  }
+}
+
+.main-content {
+  position: relative;
+  z-index: 2;
+}
