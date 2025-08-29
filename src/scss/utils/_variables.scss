@@ -5,14 +5,13 @@ $accent: #ffb800;
 
 $font-family: "Open Sans", sans-serif;
 $second-family: "Rubik", sans-serif;
-$third-family: "Roboto", sans-serif;
 
 $bp-sm: 576px;
 $bp-md: 768px;
 $bp-lg: 992px;
 $bp-xl: 1200px;
 
-$breakpoint-mobile: 767px; // мобільні
-$breakpoint-tablet: 1199px; // планшети до 1199px
-$breakpoint-desktop: 1200px; // десктопи від 1200px
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1199px;
+$breakpoint-desktop: 1200px;
 $breakpoint-mobile-up: $breakpoint-mobile + 1px;

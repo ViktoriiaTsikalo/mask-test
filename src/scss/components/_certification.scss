@@ -4,22 +4,62 @@
 .certification {
   display: flex;
   align-items: center;
-  padding-right: 246px;
+  padding-right: 0;
   margin-bottom: 80px;
-  h3 {
-    font-size: 15px;
-    line-height: 160%;
-    margin-right: 16px;
-  }
-  div {
-    width: 147px;
-    height: 1px;
-    background-color: vars.$accent;
-    margin-right: 87px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    h3 {
+      font-size: 15px;
+      line-height: 160%;
+      margin-right: 16px;
+    }
+    div {
+      width: 147px;
+      height: 1px;
+      background-color: vars.$accent;
+      margin-right: 0;
+    }
   }
 
   ul {
     @include mix.flex-center;
-    gap: 100px;
+    gap: 30px;
+    flex-direction: column;
+  }
+  @include mix.tablet {
+    flex-direction: row;
+    .title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 0;
+      div {
+        width: 147px;
+        height: 1px;
+        background-color: vars.$accent;
+        margin-right: 20px;
+      }
+    }
+    ul {
+      flex-direction: row;
+    }
+  }
+  @include mix.desktop {
+    flex-direction: row;
+    .title {
+      div {
+        margin-right: 87px;
+      }
+    }
+
+    ul {
+      flex-direction: row;
+      gap: 100px;
+    }
   }
 }

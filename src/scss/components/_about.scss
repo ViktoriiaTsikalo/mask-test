@@ -9,10 +9,11 @@
   .part {
     display: flex;
     gap: 44px;
+    flex-direction: column;
     img {
       border-radius: 16px 16px 16px 0;
-      width: 570px;
-      height: 616px;
+      width: 100%;
+      height: auto;
     }
     div {
       display: flex;
@@ -35,6 +36,25 @@
 
       p:first-of-type {
         margin-bottom: 30px;
+      }
+    }
+  }
+  @include mix.tablet {
+    .part {
+      flex-direction: row;
+      img {
+        width: 300px;
+        height: auto;
+      }
+    }
+  }
+
+  @include mix.desktop {
+    .part {
+      flex-direction: row;
+      img {
+        width: 570px;
+        height: 616px;
       }
     }
   }

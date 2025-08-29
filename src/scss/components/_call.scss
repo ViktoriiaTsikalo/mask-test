@@ -1,0 +1,42 @@
+@use "utils/mixins" as mix;
+@use "utils/variables" as vars;
+
+.call {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 120px;
+  h2 {
+    font-family: vars.$second-family;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 104%;
+    text-align: center;
+    color: vars.$dark-1-122d;
+    margin-bottom: 23px;
+  }
+
+  p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 188%;
+    max-width: 664px;
+    margin: 0 auto;
+  }
+
+  button {
+    border-radius: 8px;
+    width: 115px;
+    height: 46px;
+    box-shadow: 0 10px 15px 0 rgba(27, 95, 193, 0.19);
+    background: vars.$blue;
+    font-family: vars.$second-family;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 214%;
+    text-align: center;
+    color: #fff;
+    margin-top: 32px;
+  }
+}

@@ -99,10 +99,10 @@ export function serve() {
     notify: false,
   });
 
-  gulp.watch(paths.html, html); // HTML → повний reload
-  gulp.watch(paths.scss, styles); // SCSS → stream
-  gulp.watch(paths.js, scripts); // JS → stream
-  gulp.watch(paths.images, images); // Images → reload
+  gulp.watch(paths.html, html);
+  gulp.watch(paths.scss, styles);
+  gulp.watch(paths.js, scripts);
+  gulp.watch(paths.images, images);
   gulp.watch(paths.fonts, fonts);
 }
 

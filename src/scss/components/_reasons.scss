@@ -4,11 +4,12 @@
 .reasons {
   display: flex;
   margin-bottom: 80px;
+  flex-direction: column;
+  gap: 20px;
   .mask {
     border-radius: 16px 16px 16px 0;
-    width: 400px;
-    height: 630px;
-    margin-right: 87px;
+    width: 100%;
+    height: auto;
   }
   div {
     padding-top: 4px;
@@ -59,6 +60,22 @@
           }
         }
       }
+    }
+  }
+
+  @include mix.tablet {
+    .mask {
+      margin: 0 auto;
+      width: 60%;
+    }
+  }
+  @include mix.desktop {
+    flex-direction: row;
+    gap: 0;
+    .mask {
+      width: 400px;
+      height: 630px;
+      margin-right: 87px;
     }
   }
 }

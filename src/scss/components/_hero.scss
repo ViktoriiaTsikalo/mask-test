@@ -6,9 +6,10 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 72px;
+  flex-direction: column;
+  gap: 40px;
 
   > div {
-    max-width: 555px;
     width: 100%;
     .number {
       font-family: vars.$second-family;
@@ -22,7 +23,7 @@
     h1 {
       font-family: vars.$second-family;
       font-weight: 700;
-      font-size: 72px;
+      font-size: 50px;
       line-height: 114%;
       color: vars.$dark-1-122d;
       margin-bottom: 25px;
@@ -69,7 +70,39 @@
 
   img {
     border-radius: 16px 16px 16px 0;
-    width: 496px;
-    height: 744px;
+    width: 100%;
+    height: auto;
+  }
+
+  @include mix.tablet {
+    flex-direction: row;
+    gap: 0;
+    div {
+      width: 300px;
+      h1 {
+        font-size: 72px;
+      }
+    }
+    img {
+      border-radius: 16px 16px 16px 0;
+      width: 300px;
+      height: auto;
+    }
+  }
+
+  @include mix.desktop {
+    flex-direction: row;
+    gap: 0;
+    div {
+      width: 555px;
+      h1 {
+        font-size: 72px;
+      }
+    }
+    img {
+      border-radius: 16px 16px 16px 0;
+      width: 496px;
+      height: 744px;
+    }
   }
 }

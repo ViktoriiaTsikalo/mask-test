@@ -1,1 +1,1 @@
-const burger=document.querySelector(".burger"),nav=document.querySelector("#nav");burger&&nav&&burger.addEventListener("click",()=>{const e="true"===burger.getAttribute("aria-expanded");burger.setAttribute("aria-expanded",String(!e)),nav.hidden=e});
+(()=>{const e={openModalBtn:document.querySelector("[data-menu-open]"),closeModalBtn:document.querySelector("[data-menu-close]"),modal:document.querySelector("[data-menu]")};function o(){e.modal.classList.toggle("is-open")}e.openModalBtn.addEventListener("click",o),e.closeModalBtn.addEventListener("click",o)})();

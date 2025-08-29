@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Homepage</title>
+    <title>Mask</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -16,17 +16,44 @@
       <div></div>
     </a>
 
+    <button class="menu-toggle" aria-label="Toggle menu" data-menu-open>
+      <svg width="40" height="40">
+        <use href="images/sprite.svg#icon-menu"></use>
+      </svg>
+    </button>
+
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Product</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="#">History</a></li>
         <li><button>Contact us</button></li>
       </ul>
     </nav>
   </div>
 </header>
+
+<div class="mobile-menu" data-menu>
+  <div class="container mobile-menu-container">
+    <button class="mobile-menu-close" data-menu-close>
+      <svg width="8" height="8">
+        <use href="images/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">History</a></li>
+        <li><button>Contact us</button></li>
+      </ul>
+    </nav>
+  </div>
+</div>
 
       <main>
         <section class="container hero">
@@ -221,8 +248,11 @@
 </section>
 
         <section class="container certification">
-  <h3>Our Lab Certification</h3>
-  <div></div>
+  <div class="title">
+    <h3>Our Lab Certification</h3>
+    <div></div>
+  </div>
+
   <ul>
     <li><img src="images/fda.webp" alt="fda" width="66" height="80" /></li>
     <li>
@@ -416,7 +446,7 @@
     </li>
   </ul>
 </section>
- <section>
+ <section class="container call">
   <h2>Get One Step Ahead Of Disease</h2>
   <p>
     Imperdiet aliquet est vel nulla turpis eu consequat ullamcorper a egestas
@@ -430,83 +460,105 @@
 
       <footer>
   <div>
-    <address>
-      <ul>
-        <li>
-          <img
-            src="images/location.webp"
-            alt="location icon"
-            width="46"
-            height="46"
-          />
-          <span>Address</span><br />
-          <a
-            href="https://www.google.com/maps/place/123+5th+Ave,+New+York,+NY,+USA"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            123 5th Avenue, New York, US
-          </a>
-        </li>
-        <li>
-          <img
-            src="images/phone-footer.webp"
-            alt="phone icon"
-            width="46"
-            height="46"
-          />
-          <span>Call Us</span><br />
-          <a href="tel:+11234567890">+1 123 456 7890</a>
-        </li>
-        <li>
-          <img src="images/mail.webp" alt="mail icon" width="46" height="46" />
-          <span>Email Us</span><br />
-          <a href="mailto:info@example.com">info@example.com</a>
-        </li>
-      </ul>
-    </address>
-    <ul>
-      <li>
-        <div></div>
-        <p>
-          Our team is led by several chief engineers, composed of a large number
-          of researchers absorbed in their work in our comprehensive laboratory,
-          which is also a renowned medical equipment testing center in Hong
-          Kong.
-        </p>
-      </li>
-      <li>
-        <h3>Company</h3>
-        <nav class="footer-nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">History</a></li>
-          </ul>
-        </nav>
-      </li>
-      <h3>Follow Us</h3>
-      <div>
-        <div></div>
+    <div class="yellow-footer">
+      <address class="container">
         <ul>
-          <li><a href="#" aria-label="Facebook">Facebook</a></li>
-
-          <li><a href="#" aria-label="Twitter">Twitter</a></li>
-          <li><a href="#" aria-label="Google+">Google +</a></li>
-          <li><a href="#" aria-label="YouTube">YouTube</a></li>
-          <li><a href="#" aria-label="Linkedin">Linkedin</a></li>
+          <li class="address">
+            <img
+              src="images/location.webp"
+              alt="location icon"
+              width="25"
+              height="32"
+            />
+            <div>
+              <span>Address</span>
+              <a
+                href="https://www.google.com/maps/place/123+5th+Ave,+New+York,+NY,+USA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                123 5th Avenue, New York, US
+              </a>
+            </div>
+          </li>
+          <li class="phone">
+            <img
+              src="images/phone-footer.webp"
+              alt="phone icon"
+              width="32"
+              height="32"
+            />
+            <div>
+              <span>Call Us</span>
+              <a href="tel:+11234567890">+1 123 456 7890</a>
+            </div>
+          </li>
+          <li class="mail">
+            <img
+              src="images/mail.webp"
+              alt="mail icon"
+              width="32"
+              height="22"
+            />
+            <div>
+              <span>Email Us</span>
+              <a href="mailto:info@example.com">info@example.com</a>
+            </div>
+          </li>
         </ul>
+      </address>
+    </div>
+    <div class="grey-footer">
+      <div class="first-part">
+        <div class="container">
+          <div class="team">
+            <div></div>
+            <p>
+              Our team is led by several chief engineers, composed of a large
+              number of researchers absorbed in their work in our comprehensive
+              laboratory, which is also a renowned medical equipment testing
+              center in Hong Kong.
+            </p>
+          </div>
+          <div class="company">
+            <h3>Company</h3>
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">History</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="follow">
+            <h3>Follow Us</h3>
+            <div>
+              <div>
+                <div class="top-column"></div>
+                <div class="bottom-column"></div>
+              </div>
+              <ul>
+                <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                <li><a href="#" aria-label="Google+">Google +</a></li>
+                <li><a href="#" aria-label="YouTube">YouTube</a></li>
+                <li><a href="#" aria-label="Linkedin">Linkedin</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </ul>
+      <div class="container second-part">
+        <p>Copyright<span></span> 2020 N95</p>
+      </div>
+    </div>
   </div>
-  <p>Copyright<span></span> 2020 N95</p>
 </footer>
 
     </div>
-    <!-- Header -->
-
     <script src="js/main.js"></script>
   </body>
 </html>

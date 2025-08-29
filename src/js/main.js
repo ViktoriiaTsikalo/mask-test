@@ -1,10 +1,14 @@
-const burger = document.querySelector(".burger");
-const nav = document.querySelector("#nav");
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-menu-open]"),
+    closeModalBtn: document.querySelector("[data-menu-close]"),
+    modal: document.querySelector("[data-menu]"),
+  };
 
-if (burger && nav) {
-  burger.addEventListener("click", () => {
-    const opened = burger.getAttribute("aria-expanded") === "true";
-    burger.setAttribute("aria-expanded", String(!opened));
-    nav.hidden = opened;
-  });
-}
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle("is-open");
+  }
+})();

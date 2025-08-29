@@ -5,11 +5,15 @@
   ul {
     display: flex;
     gap: 25px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
     li {
       background-color: #fff;
       border: 1px solid #b8b6b662;
       border-radius: 16px 16px 16px 0;
       padding: 50px 35px;
+      width: 100%;
+
       div {
         display: flex;
         align-items: center;
@@ -64,6 +68,14 @@
             font-weight: 400;
           }
         }
+      }
+    }
+  }
+  @include mix.desktop {
+    ul {
+      flex-wrap: nowrap;
+      li {
+        width: calc((100% - 50px) / 3);
       }
     }
   }

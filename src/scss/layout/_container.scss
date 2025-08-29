@@ -3,15 +3,18 @@
 
 .container {
   max-width: 393px;
-  margin: 0 auto; // базова ширина для мобільних
+  padding: 0 20px;
+  margin: 0 auto; // для мобільних
 
   // Планшети
   @include mix.tablet {
     max-width: 768px;
+    padding: 0 20px;
   }
 
   // Десктопи
   @include mix.desktop {
     max-width: 1140px;
+    padding: 0;
   }
 }

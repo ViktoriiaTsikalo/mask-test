@@ -14,30 +14,116 @@
       background: #c4c4c4;
     }
   }
+  .menu-toggle {
+    display: block;
+    svg {
+      fill: vars.$dark-1-122d;
+    }
+  }
   nav {
-    ul {
-      @include mix.flex-center;
-      gap: 45px;
+    display: none;
+  }
 
-      li {
-        font-size: 16px;
-        line-height: 188%;
+  @include mix.desktop {
+    .menu-toggle {
+      display: none;
+    }
+    nav {
+      display: block;
+      ul {
+        @include mix.flex-center;
+        gap: 45px;
 
-        &:first-child {
-          color: vars.$dark-1-122d;
+        li {
+          font-size: 16px;
+          line-height: 188%;
+
+          &:first-child {
+            color: vars.$dark-1-122d;
+          }
+
+          button {
+            border-radius: 8px;
+            width: 123px;
+            height: 47px;
+            background-color: vars.$blue;
+            font-family: vars.$second-family;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 214%;
+            text-align: center;
+            color: #fff;
+          }
         }
+      }
+    }
+  }
+}
 
-        button {
-          border-radius: 8px;
-          width: 123px;
-          height: 47px;
-          background-color: vars.$blue;
-          font-family: vars.$second-family;
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 214%;
-          text-align: center;
-          color: #fff;
+.mobile-menu {
+  position: fixed;
+  z-index: 22;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #e5f1ee;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-menu-container {
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .mobile-menu-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid rgba(46, 47, 66, 0.1);
+      display: flex;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    nav {
+      ul {
+        @include mix.flex-center;
+        gap: 30px;
+        flex-direction: column;
+
+        li {
+          font-size: 16px;
+          line-height: 188%;
+
+          &:first-child {
+            color: vars.$dark-1-122d;
+          }
+
+          button {
+            border-radius: 8px;
+            width: 123px;
+            height: 47px;
+            background-color: vars.$blue;
+            font-family: vars.$second-family;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 214%;
+            text-align: center;
+            color: #fff;
+          }
         }
       }
     }

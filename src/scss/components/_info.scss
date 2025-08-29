@@ -4,30 +4,30 @@
 .info {
   background-color: #fff;
   position: relative;
-  height: 616px;
+  height: 996px;
   border-radius: 0 20px 20px 0;
   margin-bottom: 80px;
   div {
     .laboratory-img {
       position: absolute;
       left: 0;
-      bottom: 0;
+      top: 0;
       border-radius: 20px 0 0 0;
-      width: 570px;
-      height: 592px;
+      width: 100%;
+      height: auto;
     }
     .laboratory-text {
       position: absolute;
-      left: 285px;
-      bottom: 0;
+      right: 0;
+      top: 0;
       display: block;
-      width: 285px;
-      height: 332px;
+      width: 200px;
+      height: auto;
       background-color: vars.$blue;
       font-size: 15px;
       line-height: 160%;
       color: #fff;
-      padding: 60px 30px 80px;
+      padding: 10px 20px 10px;
     }
   }
   div {
@@ -37,25 +37,25 @@
         display: block;
         font-size: 15px;
         line-height: 160%;
-        padding: 80px 30px 132px;
-        top: 0;
-        right: 285px;
-        width: 285px;
-        height: 332px;
+        padding: 20px 0 0;
+        top: 407px;
+        left: 10px;
+        width: 150px;
+        height: auto;
       }
       .blue-part {
         position: absolute;
-        border-radius: 0 20px 0 0;
+        border-radius: 0;
         right: 0;
-        top: 0;
+        top: 407px;
         display: block;
-        width: 285px;
-        height: 332px;
+        width: 200px;
+        height: auto;
         background-color: vars.$blue;
         font-size: 15px;
         line-height: 160%;
         color: #fff;
-        padding: 80px 30px 132px;
+        padding: 20px 30px 20px;
       }
     }
     .yellow-part {
@@ -64,8 +64,8 @@
       right: 0;
       display: block;
       background-color: vars.$accent;
-      width: 570px;
-      height: 284px;
+      width: 100%;
+      height: auto;
       border-radius: 0 0 20px 0;
       padding: 45px 40px 49px 38px;
 
@@ -85,6 +85,7 @@
       }
       div {
         display: flex;
+        flex-direction: column;
 
         button {
           border: 1px solid vars.$blue;
@@ -98,10 +99,12 @@
           text-align: center;
           color: vars.$blue;
           margin-right: 40px;
+          margin-bottom: 10px;
         }
         .contacts {
-          padding-left: 40px;
-          border-left: 1px solid #fff;
+          padding-left: 0;
+          display: flex;
+          flex-direction: row;
           div {
             display: flex;
             flex-direction: column;
@@ -119,6 +122,97 @@
               line-height: 100%;
               color: #000;
             }
+          }
+        }
+      }
+    }
+  }
+  @include mix.tablet {
+    height: 616px;
+
+    div {
+      .laboratory-img {
+        left: 0;
+        top: 24px;
+        bottom: 0;
+
+        width: 400px;
+        height: 592px;
+        object-fit: cover;
+      }
+      .laboratory-text {
+        top: 332px;
+        right: 368px;
+      }
+    }
+    div {
+      div {
+        .white-part {
+          top: 0;
+          right: 200px;
+          left: 410px;
+        }
+        .blue-part {
+          right: 0;
+          top: 0;
+        }
+      }
+      .yellow-part {
+        width: 368px;
+        height: 384px;
+      }
+    }
+  }
+  @include mix.desktop {
+    height: 616px;
+    div {
+      .laboratory-img {
+        top: 24px;
+        bottom: 0;
+
+        width: 570px;
+        height: 592px;
+      }
+      .laboratory-text {
+        left: 285px;
+        top: 284px;
+        width: 285px;
+        height: 332px;
+        padding: 60px 30px 80px;
+      }
+    }
+    div {
+      div {
+        .white-part {
+          padding: 80px 30px 132px;
+          top: 0;
+          left: 580px;
+          width: 285px;
+          height: 332px;
+        }
+        .blue-part {
+          border-radius: 0 20px 0 0;
+          top: 0;
+
+          width: 285px;
+          height: 332px;
+
+          padding: 80px 30px 132px;
+        }
+      }
+      .yellow-part {
+        width: 570px;
+        height: 284px;
+        border-radius: 0 0 20px 0;
+        padding: 45px 40px 49px 38px;
+
+        div {
+          display: flex;
+          flex-direction: row;
+
+          .contacts {
+            padding-left: 40px;
+            border-left: 1px solid #fff;
           }
         }
       }

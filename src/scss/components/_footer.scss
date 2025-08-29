@@ -1,0 +1,215 @@
+@use "utils/mixins" as mix;
+@use "utils/variables" as vars;
+
+.yellow-footer {
+  background-color: vars.$accent;
+  address {
+    ul {
+      padding-top: 41px;
+      padding-bottom: 39px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .address {
+        display: flex;
+      }
+      .phone {
+        display: flex;
+      }
+      .mail {
+        display: flex;
+      }
+      li {
+        font-style: normal;
+        align-items: start;
+        div {
+          display: flex;
+          flex-direction: column;
+          margin-left: 16px;
+          span {
+            font-family: vars.$second-family;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            color: vars.$dark-1-122d;
+            margin-bottom: 7px;
+          }
+          a {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 133%;
+            color: vars.$dark-1-122d;
+          }
+        }
+      }
+    }
+  }
+  @include mix.tablet {
+    address {
+      ul {
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 0;
+        .address {
+          justify-content: start;
+        }
+        .phone {
+          justify-content: center;
+          border-right: 1px solid #e0e0e0;
+          border-left: 1px solid #e0e0e0;
+          width: 260px;
+        }
+        .mail {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  @include mix.desktop {
+    address {
+      ul {
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 0;
+        .address {
+          justify-content: start;
+        }
+        .phone {
+          justify-content: center;
+          border-right: 1px solid #e0e0e0;
+          border-left: 1px solid #e0e0e0;
+          width: 433px;
+        }
+        .mail {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.grey-footer {
+  background-color: #ecf0f5;
+  .first-part {
+    border-bottom: 1px solid #e1e6ec;
+    padding-top: 73px;
+    padding-bottom: 60px;
+    div {
+      display: flex;
+      flex-direction: column;
+      .team {
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        div {
+          width: 161px;
+          height: 40px;
+          background-color: #c4c4c4;
+          margin-bottom: 33px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 160%;
+        }
+      }
+      .company {
+        display: flex;
+        flex-direction: column;
+        h3 {
+          font-family: vars.$second-family;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 150%;
+          color: vars.$dark-1-122d;
+        }
+
+        nav ul {
+          margin: 0; // прибирає зайве
+          padding: 0;
+          li {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 200%;
+            &:first-child {
+              color: vars.$blue;
+            }
+          }
+        }
+      }
+
+      .follow {
+        display: flex;
+        flex-direction: column;
+        h3 {
+          font-family: vars.$second-family;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 150%;
+          color: vars.$dark-1-122d;
+        }
+        div {
+          display: flex;
+          flex-direction: row;
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 7px;
+            margin-right: 8px;
+            .top-column {
+              width: 22px;
+              background-color: #3f67c442;
+              height: 52px;
+            }
+
+            .bottom-column {
+              width: 22px;
+              background-color: vars.$blue;
+              height: 72px;
+            }
+          }
+          ul li {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 200%;
+          }
+        }
+      }
+    }
+  }
+
+  .second-part {
+    padding-top: 31px;
+    padding-bottom: 31px;
+    display: flex;
+    justify-content: center;
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 214%;
+      span {
+        width: 12px;
+        height: 12px;
+        background-color: #626264;
+        display: inline-block;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  @include mix.tablet {
+    .first-part div {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @include mix.desktop {
+    .first-part div {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
